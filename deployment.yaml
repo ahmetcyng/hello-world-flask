@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: flask-app 
-        image: hello-world-flask 
+        image: https://192.168.2.54:5000/hello-world-flask 
         ports:
         - containerPort: 6666 
