@@ -1,21 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment
-  labels:
-    app: flask-app
+  name: flaskappDeployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flask-app
+      app: helloworldflask
   template:
     metadata:
       labels:
-        app: flask-app 
+        app: helloworldflask
     spec:
       containers:
-      - name: flask-app 
-        image: hello-world-flask 
+      - name: helloworldflask
+        image: 192.168.2.54:5000/hello-world-flask
         ports:
-        - containerPort: 6666 
+        - containerPort: 6666
